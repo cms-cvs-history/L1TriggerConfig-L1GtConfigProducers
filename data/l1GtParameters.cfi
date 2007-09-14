@@ -1,0 +1,15 @@
+//
+
+es_module l1GtParameters = L1GtParametersTrivialProducer {
+
+    // number of bunch crossing in the GT readout record: 3 bx (standard), 5 bx (debug)
+    int32 TotalBxInEvent = 3
+    
+    // list of active boards (actually 16 bits)
+    // default: all active 0xFFFF
+    uint32 ActiveBoards = 0xFFFF
+
+}
+
+
+
