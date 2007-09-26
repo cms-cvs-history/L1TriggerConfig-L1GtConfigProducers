@@ -1,0 +1,59 @@
+//
+
+es_module l1GtStableParameters = L1GtStableParametersTrivialProducer {
+
+    // trigger decision
+
+    // number of physics trigger algorithms
+    uint32 NumberPhysTriggers = 128
+
+    // additional number of physics trigger algorithms
+    uint32 NumberPhysTriggersExtended = 64
+
+    // number of technical triggers
+    uint32 NumberTechnicalTriggers = 64
+
+    // trigger objects
+
+    // muons
+    uint32 NumberL1Muons = 4
+
+    // e/gamma and isolated e/gamma objects
+    uint32 NumberL1EGamma = 4
+    uint32 NumberL1IsolatedEGamma = 4
+
+    // central, forward and tau jets
+    uint32 NumberL1CentralJets = 4
+    uint32 NumberL1ForwardJets = 4
+    uint32 NumberL1TauJets = 4
+
+    // jet counts
+    uint32 NumberL1JetCounts = 12
+
+
+    // hardware
+
+    // number of maximum chips defined in the xml file
+    uint32 NumberConditionChips = 2
+
+    // number of pins on the GTL condition chips
+    uint32 PinsOnConditionChip = 96
+
+    // correspondence "condition chip - GTL algorithm word" in the hardware
+    // e.g.: chip 2: 0 - 95;  chip 1: 96 - 128 (191)
+    vint32 OrderConditionChip = {2, 1}
+
+    // number of PSB boards in GT
+    int32 NumberPsbBoards = 7
+
+
+    // GT DAQ record organized in words of WordLength bits
+    int32 WordLength = 64
+
+    // one unit in the word is UnitLength bits
+    int32 UnitLength = 8
+
+}
+
+
+

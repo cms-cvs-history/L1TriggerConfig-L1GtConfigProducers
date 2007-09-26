@@ -1,0 +1,17 @@
+// cfi for L1 GT Trigger Menu produced from an XML file
+
+es_module l1GtTriggerMenuXml = L1GtTriggerMenuXmlProducer {
+
+    // choose luminosity directory
+    string TriggerMenuLuminosity = "lumi1x1032"
+    
+    // XML file for Global Trigger menu (def.xml) 
+    string DefXmlFile = "L1Menu2007.xml"              
+
+    // XML file for Global Trigger VME configuration (vme.xml)                 
+    string VmeXmlFile = ""
+    
+}
+
+
+
