@@ -48,10 +48,10 @@ es_module l1GtBoardMaps = L1GtBoardMapsTrivialProducer {
 
     // L1 GT "active boards" map for EVM record
     // boards not in the record have negative index
-    vint32 ActiveBoardsEvmRecord = {-1, 0, 
+    vint32 ActiveBoardsEvmRecord = {-1, 1, 
                                     -1,-1,-1,-1,-1,-1,-1,
-                                     1,
                                     -1,
+                                     0,
                                     -1
     }
 
