@@ -4,3 +4,4 @@ include "L1TriggerConfig/L1GtConfigProducers/data/L1GtStableParametersConfig.cff
 include "L1TriggerConfig/L1GtConfigProducers/data/L1GtParametersConfig.cff"
 include "L1TriggerConfig/L1GtConfigProducers/data/L1GtFactorsConfig.cff"
 include "L1TriggerConfig/L1GtConfigProducers/data/L1GtBoardMapsConfig.cff"
+include "L1TriggerConfig/L1GtConfigProducers/data/L1GtTriggerMenuConfig.cff"
