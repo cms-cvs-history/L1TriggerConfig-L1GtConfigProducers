@@ -16,16 +16,16 @@ es_module l1GtStableParameters = L1GtStableParametersTrivialProducer {
     // trigger objects
 
     // muons
-    uint32 NumberL1Muons = 4
+    uint32 NumberL1Mu = 4
 
     // e/gamma and isolated e/gamma objects
-    uint32 NumberL1EGamma = 4
-    uint32 NumberL1IsolatedEGamma = 4
+    uint32 NumberL1NoIsoEG = 4
+    uint32 NumberL1IsoEG = 4
 
     // central, forward and tau jets
-    uint32 NumberL1CentralJets = 4
-    uint32 NumberL1ForwardJets = 4
-    uint32 NumberL1TauJets = 4
+    uint32 NumberL1CenJet = 4
+    uint32 NumberL1ForJet = 4
+    uint32 NumberL1TauJet = 4
 
     // jet counts
     uint32 NumberL1JetCounts = 12
@@ -46,6 +46,8 @@ es_module l1GtStableParameters = L1GtStableParametersTrivialProducer {
     // number of PSB boards in GT
     int32 NumberPsbBoards = 7
 
+    // number of bits for eta of calorimeter objects
+    uint32 IfCaloEtaNumberBits = 4
 
     // GT DAQ record organized in words of WordLength bits
     int32 WordLength = 64

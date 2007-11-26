@@ -21,20 +21,20 @@ es_module l1GtBoardMaps = L1GtBoardMapsTrivialProducer {
     
     // L1 GT DAQ record map
     // boards not in the record have negative index
-    vint32 BoardIndexDaqRecord = { 1, 2, 
-                                   3, 4, 5, 6, 7, 8, 9,
-                                  10,
-                                  -1,
-                                  -1
+    vint32 BoardPositionDaqRecord = { 1, 2, 
+                                      3, 4, 5, 6, 7, 8, 9,
+                                     10,
+                                     -1,
+                                     -1
     }
 
     // L1 GT EVM record map
     // boards not in the record have negative index
-    vint32 BoardIndexEvmRecord = { 1, 3, 
-                                  -1,-1,-1,-1,-1,-1,-1,
-                                  -1,
-                                   2,
-                                  -1
+    vint32 BoardPositionEvmRecord = { 1, 3, 
+                                     -1,-1,-1,-1,-1,-1,-1,
+                                     -1,
+                                      2,
+                                     -1
     }
     
     // L1 GT "active boards" map for DAQ record
@@ -79,29 +79,29 @@ es_module l1GtBoardMaps = L1GtBoardMapsTrivialProducer {
                               173
     }
 
-    // L1 GT CA list (GCT input to PSB)
-    vint32 CableList = {1,  2, 3, 4,
-                        5,  6, 7, 8,
-                        9, 10 
+    
+    
+    // L1 quadruplet (4x16 bits)(cable) to PSB input map
+    vstring CableList = {"TechTr",  "Free",     "Free",       "Free",
+                         "IsoEGQ",  "NoIsoEGQ", "CenJetQ",    "ForJetQ",  
+                         "TauJetQ", "ESumsQ",   "JetCountsQ", "Free", 
+                         "Free",    "Free",     "Free",       "Free",
+                         "MQB1",    "MQB2",     "MQF3",       "MQF4",
+                         "MQB5",    "MQB6",     "MQF7",       "MQF8",
+                         "MQB9",    "MQB10",    "MQF11",      "MQF12"
     }
-
-    // L1 GT calo input map (IsoEGQ to CA_1, ...)
-    //    gives the mapping of calorimeter objects to GT calorimeter input
-    // GT calorimeter input will be mapped to PSBs later
-    vstring CaloObjectInputMap = {"IsoEGQ",  "NoIsoEGQ", "CenJetQ",    "ForJetQ",  
-                                  "TauJetQ", "ESumsQ",   "JetCountsQ", "Free", 
-                                  "Free",    "Free"
+                                      
+    
+    // gives the mapping of cables to GT PSBs via PSB index
+    // 4 infinicables per PSB 
+    vint32 CableToPsbMap = {0, 0, 0, 0,
+                            1, 1, 1, 1,
+                            2, 2, 2, 2, 
+                            3, 3, 3, 3,
+                            4, 4, 4, 4,
+                            5, 5, 5, 5,
+                            6, 6, 6, 6
     }
-
-    // L1 GT calo input to PSB map
-    //    gives the mapping of GT calorimeter input to GT PSBs via PSB index
-    //    4 infinicables per PSB (last PSB can use only 2!) 
-    vint32 CaloInputToPsbMap = {1, 1, 1, 1,
-                                2, 2, 2, 2, 
-                                3, 3
-    }
-
-
 
 }
 
