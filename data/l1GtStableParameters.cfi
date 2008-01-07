@@ -49,6 +49,9 @@ es_module l1GtStableParameters = L1GtStableParametersTrivialProducer {
     // number of bits for eta of calorimeter objects
     uint32 IfCaloEtaNumberBits = 4
 
+    // number of bits for eta of muon objects
+    uint32 IfMuEtaNumberBits = 6
+
     // GT DAQ record organized in words of WordLength bits
     int32 WordLength = 64
 

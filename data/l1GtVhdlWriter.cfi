@@ -1,0 +1,11 @@
+// cfi for L1 GT VHDL Writer
+
+module l1GtVhdlWriter = L1GtVhdlWriter {
+
+    // choose VHDL directory
+    string VhdlTemplatesDir = "VhdlTemplates"
+        
+}
+
+
+
