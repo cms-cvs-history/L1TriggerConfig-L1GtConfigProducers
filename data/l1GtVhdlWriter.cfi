@@ -3,7 +3,10 @@
 module l1GtVhdlWriter = L1GtVhdlWriter {
 
     // choose VHDL directory
-    string VhdlTemplatesDir = "VhdlTemplates"
+    string VhdlTemplatesDir = "../data/VhdlTemplates/"
+    
+    // choose ouput directory
+    string OutputDir = "../test/output/"
         
 }
 
