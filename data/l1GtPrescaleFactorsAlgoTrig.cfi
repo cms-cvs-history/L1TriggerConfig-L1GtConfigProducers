@@ -1,0 +1,24 @@
+// prescale factors for L1 GT algorithm triggers 
+
+es_module l1GtPrescaleFactorsAlgoTrig = L1GtPrescaleFactorsAlgoTrigTrivialProducer {
+
+    vint32 PrescaleFactors = {
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1,       1,       1,
+           1,       1,       1,       1,       1,       1,       1,       1
+    }
+       
+}
+
+
+

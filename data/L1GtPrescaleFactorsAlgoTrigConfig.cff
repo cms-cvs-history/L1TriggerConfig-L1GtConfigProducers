@@ -1,0 +1,9 @@
+//
+
+es_source L1GtPrescaleFactorsAlgoTrigRcdSource = EmptyESSource {
+    string recordName = "L1GtPrescaleFactorsAlgoTrigRcd"
+    vuint32 firstValid = { 1 }
+    bool iovIsRunNotTime = true
+}
+
+include "L1TriggerConfig/L1GtConfigProducers/data/l1GtPrescaleFactorsAlgoTrig.cfi"
