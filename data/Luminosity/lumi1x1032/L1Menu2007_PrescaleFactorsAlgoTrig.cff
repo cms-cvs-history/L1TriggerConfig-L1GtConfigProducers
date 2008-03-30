@@ -1,12 +1,12 @@
-// synchronized with L1Trigger/L1ExtraFromDigis/data/l1extraParticleMap.cfi, Revision 1.23
-
-es_module l1GtFactors = L1GtFactorsTrivialProducer {
 
 
 
+//
+// cff file with prescale factors for L1 GT algorithm triggers
+//
 
-  // prescale factors
-  vint32 PrescaleFactors = {
+
+replace l1GtFactors.PrescaleFactors = {    
   1000000,
   1000000,
    100000,
@@ -135,149 +135,9 @@ es_module l1GtFactors = L1GtFactorsTrivialProducer {
         1,
         1,
         1
-  }
-       
-  
-  
-  
-  
-  
-  
-  
-  
-  // trigger mask: block the corresponding algorithm if bit value is 1
-  vuint32 TriggerMask = { 
-  0,   
-  0,   
-  0,   
-  1,   
-  1,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  0,   
-  1,   
-  1,   
-  1,   
-  0,   
-  0,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  1,   
-  1,   
-  1,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  1,   
-  1,   
-  1,   
-  0,   
-  1,   
-  1,   
-  1,   
-  1,   
-  0,   
-  1,   
-  0,   
-  0,   
-  1,   
-  1,   
-  1,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0,   
-  0    
-  }
-
 }
+
+
 
 
 

@@ -82,13 +82,25 @@ es_module l1GtBoardMaps = L1GtBoardMapsTrivialProducer {
     
     
     // L1 quadruplet (4x16 bits)(cable) to PSB input map
-    vstring CableList = {"TechTr",  "Free",     "Free",       "Free",
-                         "IsoEGQ",  "NoIsoEGQ", "CenJetQ",    "ForJetQ",  
-                         "TauJetQ", "ESumsQ",   "JetCountsQ", "Free", 
-                         "Free",    "Free",     "Free",       "Free",
-                         "MQB1",    "MQB2",     "MQF3",       "MQF4",
-                         "MQB5",    "MQB6",     "MQF7",       "MQF8",
-                         "MQB9",    "MQB10",    "MQF11",      "MQF12"
+    // see L1GlobalTriggerPSB::fillPsbBlock
+    
+    // summary
+    //vstring CableList = {N/A,        N/A,         N/A,          TTr_ch0/1,  // PSB_0 slot  9
+    //                    CA1_ch6/7    CA2_ch4/5 ,  CA3_ch2/3,    CA4_ch0/1,  // PSB_1 slot 13
+    //                    CA5_ch6/7    CA6_ch4/5 ,  CA7_ch2/3,    CA8_ch0/1,  // PSB_2 slot 14
+    //                    N/A,         N/A,         CA9_ch2/3,   CA10_ch0/1,  // PSB_3 slot 15
+    //                   MQF4_ch6/7,  MQF3_ch4/5,  MQB2_ch2/3,   MQB1_ch0/1,  // PSB_4 slot 19
+    //                   MQF8_ch6/7,  MQF7_ch4/5,  MQB6_ch2/3,   MQB5_ch0/1,  // PSB_5 slot 20
+    //                   MQF12_ch6/7,MQF11_ch4/5, MQB10_ch2/3,   MQB9_ch0/1   // PSB_6 slot 21
+    //}
+    
+    vstring CableList = {"Free",     "Free",      "Free",        "TechTr",
+                         "IsoEGQ",   "NoIsoEGQ",  "CenJetQ",     "ForJetQ",  
+                         "TauJetQ",  "ESumsQ",    "JetCountsQ",  "Free", 
+                         "Free",     "Free",      "Free",        "Free",
+                         "MQF4",     "MQF3",      "MQB2",        "MQB1",
+                         "MQF8",     "MQF7",      "MQB6",        "MQB5",
+                         "MQF12",    "MQF11",     "MQB10",       "MQB9"
     }
                                       
     
