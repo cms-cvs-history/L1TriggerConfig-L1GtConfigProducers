@@ -1,4 +1,4 @@
-// cff file for L1Menu_CRUZET200805, key gr7_phys_caloTopBottom
+// cff file for L1Menu_CRUZET200805, key gr7_muon_ecal
 // to be added after L1GtConfig.cff
 
 // menu definition
@@ -10,7 +10,7 @@ replace l1GtTriggerMenuXml.VmeXmlFile = ""
 include "L1TriggerConfig/L1GtConfigProducers/data/Luminosity/lumi1x1032/L1Menu_CRUZET200805_PrescaleFactorsAlgoTrig.cff"
 
 // trigger mask for algorithm trigger
-include "L1TriggerConfig/L1GtConfigProducers/data/Luminosity/lumi1x1032/L1Menu_CRUZET200805_TriggerMaskAlgoTrig_gr7_phys_caloTopBottom.cff"
+include "L1TriggerConfig/L1GtConfigProducers/data/Luminosity/lumi1x1032/L1Menu_CRUZET200805_TriggerMaskAlgoTrig_gr7_muon_ecal.cff"
 
 // prescale factors, trigger veto mask for technical triggers
 // default: no prescale, no bit masked, no bit vetoed 
