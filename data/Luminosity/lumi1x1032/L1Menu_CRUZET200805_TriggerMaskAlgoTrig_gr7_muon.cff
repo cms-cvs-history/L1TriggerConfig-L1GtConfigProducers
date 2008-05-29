@@ -5,9 +5,11 @@
 //   8-bit mask  - for all DAQ partitions
 //
 
+include "L1TriggerConfig/L1GtConfigProducers/data/l1GtTriggerMaskAlgoTrig.cfi"
+
 
 replace l1GtTriggerMaskAlgoTrig.TriggerMask = { 
-  0x00,   
+  0xFE,   
   0xFF,   
   0xFF,   
   0xFF,   
