@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<def>
+  <header>
+    <vhdl_path>/</vhdl_path>
+    <gtl_setup_name>Correlations</gtl_setup_name>
+    <version max="ffffffff" min="00000000">00000000</version>
+    <designer_name>V M Ghete</designer_name>
+    <designer_date>Mon Jun 09 15:23:26 CEST 2008</designer_date>
+    <designer_comments/>
+  </header>
+  <chip_def>
+    <chip_1>
+      <ca1>connected</ca1>
+      <ca2>connected</ca2>
+      <ca3>connected</ca3>
+      <ca4>connected</ca4>
+      <ca5>connected</ca5>
+      <ca6>connected</ca6>
+      <ca7>connected</ca7>
+      <ca8>connected</ca8>
+      <ca9>connected</ca9>
+      <ca10>connected</ca10>
+    </chip_1>
+    <chip_2>
+      <ca1>connected</ca1>
+      <ca2>connected</ca2>
+      <ca3>connected</ca3>
+      <ca4>connected</ca4>
+      <ca5>connected</ca5>
+      <ca6>connected</ca6>
+      <ca7>connected</ca7>
+      <ca8>connected</ca8>
+      <ca9>connected</ca9>
+      <ca10>connected</ca10>
+    </chip_2>
+  </chip_def>
+  <ca_input>
+    <ca1>ieg</ca1>
+    <ca2>eg</ca2>
+    <ca3>jet</ca3>
+    <ca4>fwdjet</ca4>
+    <ca5>tau</ca5>
+    <ca6>esums</ca6>
+    <ca7>jet_cnts</ca7>
+    <ca8>free</ca8>
+    <ca9>free</ca9>
+    <ca10>free</ca10>
+  </ca_input>
+  <algos/>
+  <condition_chip_1>
+    <prealgos>
+      <L1_Dummy>Dummy<output_pin nr="1" pin="b"/>
+        <output_pin nr="1" pin="a"/>
+      </L1_Dummy>
+    </prealgos>
+    <conditions>
+      <Dummy condition="calo" particle="eg" type="1_s">
+        <et_threshold max="3f" min="00">
+          <ge_eq mode="bit">1</ge_eq>
+          <value>00</value>
+        </et_threshold>
+        <eta max="7ffe" min="0000">
+          <value>7ffe</value>
+        </eta>
+        <phi max="3ffff" min="00000">
+          <value>3ffff</value>
+        </phi>
+        <location>A0</location>
+      </Dummy>
+    </conditions>
+  </condition_chip_1>
+  <condition_chip_2>
+    <prealgos>
+      <L1_CorrCenJetMu>CorrCenJetMu<output_pin nr="1" pin="b"/>
+        <output_pin nr="1" pin="a"/>
+      </L1_CorrCenJetMu>
+      <L1_CorrTauJetMu>CorrTauJetMu<output_pin nr="2" pin="b"/>
+        <output_pin nr="2" pin="a"/>
+      </L1_CorrTauJetMu>
+      <L1_SingleMu5>SingleMu5<output_pin nr="0" pin="b"/>
+        <output_pin nr="46" pin="a"/>
+      </L1_SingleMu5>
+    </prealgos>
+    <conditions>
+      <CorrCenJetMu condition="CondCorrelation" particle="CenJet:Mu" type="Type2cor">
+        <CorrCenJetMu_CenJet condition="calo" particle="jet" type="1_s">
+          <et_threshold max="3f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>04</value>
+          </et_threshold>
+          <eta max="7ffe" min="0000">
+            <value>7ffe</value>
+          </eta>
+          <phi max="3ffff" min="00000">
+            <value>3ffff</value>
+          </phi>
+          <location>A0</location>
+        </CorrCenJetMu_CenJet>
+        <CorrCenJetMu_Mu condition="muon" particle="muon" type="1_s">
+          <pt_h_threshold max="1f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>09</value>
+          </pt_h_threshold>
+          <pt_l_threshold max="1f" min="00">
+            <value>09<en_mip mode="bit">0</en_mip>
+              <en_iso mode="bit">0</en_iso>
+              <request_iso mode="bit">0</request_iso>
+            </value>
+          </pt_l_threshold>
+          <eta max="ffffffffffffffff" min="0000000000000000">
+            <value>ffffffffffffffff</value>
+          </eta>
+          <phi_h max="8f" min="00">
+            <value>8f</value>
+          </phi_h>
+          <phi_l max="8f" min="00">
+            <value>00</value>
+          </phi_l>
+          <charge_correlation max="7" min="1">1</charge_correlation>
+          <quality max="ff" min="00">
+            <value>ff</value>
+          </quality>
+          <location>A0</location>
+        </CorrCenJetMu_Mu>
+        <delta_eta max="3fff" min="0000">
+          <value>0001</value>
+        </delta_eta>
+        <delta_phi max="3ff" min="000">
+          <value>200</value>
+        </delta_phi>      
+      </CorrCenJetMu>
+      <SingleMu5 condition="muon" particle="muon" type="1_s">
+        <pt_h_threshold max="1f" min="00">
+          <ge_eq mode="bit">1</ge_eq>
+          <value>09</value>
+        </pt_h_threshold>
+        <pt_l_threshold max="1f" min="00">
+          <value>09<en_mip mode="bit">0</en_mip>
+            <en_iso mode="bit">0</en_iso>
+            <request_iso mode="bit">0</request_iso>
+          </value>
+        </pt_l_threshold>
+        <eta max="ffffffffffffffff" min="0000000000000000">
+          <value>ffffffffffffffff</value>
+        </eta>
+        <phi_h max="8f" min="00">
+          <value>8f</value>
+        </phi_h>
+        <phi_l max="8f" min="00">
+          <value>00</value>
+        </phi_l>
+        <charge_correlation max="7" min="1">1</charge_correlation>
+        <quality max="ff" min="00">
+          <value>f0</value>
+        </quality>
+        <location>A0</location>
+      </SingleMu5>      
+      <CorrTauJetMu condition="CondCorrelation" particle="TauJet:Mu" type="Type2cor">
+        <CorrTauJetMu_TauJet condition="calo" particle="tau" type="1_s">
+          <et_threshold max="3f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>04</value>
+          </et_threshold>
+          <eta max="7ffe" min="0000">
+            <value>7ffe</value>
+          </eta>
+          <phi max="3ffff" min="00000">
+            <value>3ffff</value>
+          </phi>
+          <location>A0</location>
+        </CorrTauJetMu_TauJet>
+        <CorrTauJetMu_Mu condition="muon" particle="muon" type="1_s">
+          <pt_h_threshold max="1f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>09</value>
+          </pt_h_threshold>
+          <pt_l_threshold max="1f" min="00">
+            <value>09<en_mip mode="bit">0</en_mip>
+              <en_iso mode="bit">0</en_iso>
+              <request_iso mode="bit">0</request_iso>
+            </value>
+          </pt_l_threshold>
+          <eta max="ffffffffffffffff" min="0000000000000000">
+            <value>ffffffffffffffff</value>
+          </eta>
+          <phi_h max="8f" min="00">
+            <value>8f</value>
+          </phi_h>
+          <phi_l max="8f" min="00">
+            <value>00</value>
+          </phi_l>
+          <charge_correlation max="7" min="1">1</charge_correlation>
+          <quality max="ff" min="00">
+            <value>ff</value>
+          </quality>
+          <location>A0</location>
+        </CorrTauJetMu_Mu>
+        <delta_eta max="3fff" min="0000">
+          <value>0001</value>
+        </delta_eta>
+        <delta_phi max="3ff" min="000">
+          <value>200</value>
+        </delta_phi>      
+      </CorrTauJetMu>
+    </conditions>
+  </condition_chip_2>
+</def>

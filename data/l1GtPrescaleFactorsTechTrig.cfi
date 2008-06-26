@@ -3,10 +3,10 @@
 es_module l1GtPrescaleFactorsTechTrig = L1GtPrescaleFactorsTechTrigTrivialProducer {
 
 
+  VPSet PrescaleFactorsSet = {
 
-
-
-    vint32 PrescaleFactors = {
+    {
+       vint32 PrescaleFactors = {
            1,
            1,
            1,
@@ -71,8 +71,77 @@ es_module l1GtPrescaleFactorsTechTrig = L1GtPrescaleFactorsTechTrigTrivialProduc
            1,
            1,
            1
-    }
-       
+       }
+     },
+     {
+       vint32 PrescaleFactors = {
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1,
+           1
+       }
+     }
+  }    
 }
 
 

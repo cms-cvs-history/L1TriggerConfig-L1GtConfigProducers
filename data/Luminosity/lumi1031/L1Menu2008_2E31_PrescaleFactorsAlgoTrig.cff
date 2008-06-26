@@ -1,13 +1,12 @@
-
-
-
 //
 // cff file with prescale factors for L1 GT algorithm triggers
 //
 
 include "L1TriggerConfig/L1GtConfigProducers/data/l1GtPrescaleFactorsAlgoTrig.cfi"
 
-replace l1GtPrescaleFactorsAlgoTrig.PrescaleFactors = {    
+replace l1GtPrescaleFactorsAlgoTrig.PrescaleFactorsSet = {
+ {
+ vint32 PrescaleFactors = {    
   1000000,
   1000000,
      1000,
@@ -136,6 +135,8 @@ replace l1GtPrescaleFactorsAlgoTrig.PrescaleFactors = {
         1,
         1,
         1
+ }
+ }
 }
 
 
