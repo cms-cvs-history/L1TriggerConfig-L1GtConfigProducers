@@ -52,6 +52,9 @@
       <L1_Dummy>Dummy<output_pin nr="1" pin="b"/>
         <output_pin nr="1" pin="a"/>
       </L1_Dummy>
+      <L1_CASTORrapgap>CASTORrapgap<output_pin nr="2" pin="b"/>
+        <output_pin nr="2" pin="a"/>
+      </L1_CASTORrapgap>
     </prealgos>
     <conditions>
       <Dummy condition="calo" particle="eg" type="1_s">
@@ -67,6 +70,9 @@
         </phi>
         <location>A0</location>
       </Dummy>
+      <CASTORrapgap condition="CondCastor" particle="Castor" type="TypeCastor">
+        <location>A0</location>
+      </CASTORrapgap>
     </conditions>
   </condition_chip_1>
   <condition_chip_2>
@@ -77,9 +83,12 @@
       <L1_CorrTauJetMu>CorrTauJetMu<output_pin nr="2" pin="b"/>
         <output_pin nr="2" pin="a"/>
       </L1_CorrTauJetMu>
-      <L1_SingleMu5>SingleMu5<output_pin nr="0" pin="b"/>
+      <L1_SingleMu5>SingleMu5<output_pin nr="46" pin="b"/>
         <output_pin nr="46" pin="a"/>
       </L1_SingleMu5>
+      <L1_SingleMu5_CASTORrapgap>SingleMu5 AND CASTORrapgap<output_pin nr="47" pin="b"/>
+        <output_pin nr="47" pin="a"/>
+      </L1_SingleMu5_CASTORrapgap>
     </prealgos>
     <conditions>
       <CorrCenJetMu condition="CondCorrelation" particle="CenJet:Mu" type="Type2cor">
@@ -202,6 +211,9 @@
           <value>200</value>
         </delta_phi>      
       </CorrTauJetMu>
+      <CASTORrapgap condition="CondCastor" particle="Castor" type="TypeCastor">
+        <location>A0</location>
+      </CASTORrapgap>
     </conditions>
   </condition_chip_2>
 </def>
