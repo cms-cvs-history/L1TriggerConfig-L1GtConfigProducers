@@ -77,12 +77,12 @@
   </condition_chip_1>
   <condition_chip_2>
     <prealgos>
-      <L1_CorrCenJetMu>CorrCenJetMu<output_pin nr="1" pin="b"/>
+      <L1_CorrMuCenJet>CorrMuCenJet<output_pin nr="1" pin="b"/>
         <output_pin nr="1" pin="a"/>
-      </L1_CorrCenJetMu>
-      <L1_CorrTauJetMu>CorrTauJetMu<output_pin nr="2" pin="b"/>
+      </L1_CorrMuCenJet>
+      <L1_CorrMuTauJet>CorrMuTauJet<output_pin nr="2" pin="b"/>
         <output_pin nr="2" pin="a"/>
-      </L1_CorrTauJetMu>
+      </L1_CorrMuTauJet>
       <L1_SingleMu5>SingleMu5<output_pin nr="46" pin="b"/>
         <output_pin nr="46" pin="a"/>
       </L1_SingleMu5>
@@ -91,21 +91,8 @@
       </L1_SingleMu5_CASTORrapgap>
     </prealgos>
     <conditions>
-      <CorrCenJetMu condition="CondCorrelation" particle="CenJet:Mu" type="Type2cor">
-        <CorrCenJetMu_CenJet condition="calo" particle="jet" type="1_s">
-          <et_threshold max="3f" min="00">
-            <ge_eq mode="bit">1</ge_eq>
-            <value>04</value>
-          </et_threshold>
-          <eta max="7ffe" min="0000">
-            <value>7ffe</value>
-          </eta>
-          <phi max="3ffff" min="00000">
-            <value>3ffff</value>
-          </phi>
-          <location>A0</location>
-        </CorrCenJetMu_CenJet>
-        <CorrCenJetMu_Mu condition="muon" particle="muon" type="1_s">
+      <CorrMuCenJet condition="CondCorrelation" particle="Mu:CenJet" type="Type2cor">
+        <CorrMuCenJet_Mu condition="muon" particle="muon" type="1_s">
           <pt_h_threshold max="1f" min="00">
             <ge_eq mode="bit">1</ge_eq>
             <value>09</value>
@@ -130,14 +117,27 @@
             <value>ff</value>
           </quality>
           <location>A0</location>
-        </CorrCenJetMu_Mu>
+        </CorrMuCenJet_Mu>
+        <CorrMuCenJet_CenJet condition="calo" particle="jet" type="1_s">
+          <et_threshold max="3f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>04</value>
+          </et_threshold>
+          <eta max="7ffe" min="0000">
+            <value>7ffe</value>
+          </eta>
+          <phi max="3ffff" min="00000">
+            <value>3ffff</value>
+          </phi>
+          <location>A0</location>
+        </CorrMuCenJet_CenJet>
         <delta_eta max="3fff" min="0000">
           <value>0001</value>
         </delta_eta>
         <delta_phi max="3ff" min="000">
           <value>200</value>
         </delta_phi>      
-      </CorrCenJetMu>
+      </CorrMuCenJet>
       <SingleMu5 condition="muon" particle="muon" type="1_s">
         <pt_h_threshold max="1f" min="00">
           <ge_eq mode="bit">1</ge_eq>
@@ -164,21 +164,8 @@
         </quality>
         <location>A0</location>
       </SingleMu5>      
-      <CorrTauJetMu condition="CondCorrelation" particle="TauJet:Mu" type="Type2cor">
-        <CorrTauJetMu_TauJet condition="calo" particle="tau" type="1_s">
-          <et_threshold max="3f" min="00">
-            <ge_eq mode="bit">1</ge_eq>
-            <value>04</value>
-          </et_threshold>
-          <eta max="7ffe" min="0000">
-            <value>7ffe</value>
-          </eta>
-          <phi max="3ffff" min="00000">
-            <value>3ffff</value>
-          </phi>
-          <location>A0</location>
-        </CorrTauJetMu_TauJet>
-        <CorrTauJetMu_Mu condition="muon" particle="muon" type="1_s">
+      <CorrMuTauJet condition="CondCorrelation" particle="Mu:TauJet" type="Type2cor">
+        <CorrMuTauJet_Mu condition="muon" particle="muon" type="1_s">
           <pt_h_threshold max="1f" min="00">
             <ge_eq mode="bit">1</ge_eq>
             <value>09</value>
@@ -203,14 +190,27 @@
             <value>ff</value>
           </quality>
           <location>A0</location>
-        </CorrTauJetMu_Mu>
+        </CorrMuTauJet_Mu>
+        <CorrMuTauJet_TauJet condition="calo" particle="tau" type="1_s">
+          <et_threshold max="3f" min="00">
+            <ge_eq mode="bit">1</ge_eq>
+            <value>04</value>
+          </et_threshold>
+          <eta max="7ffe" min="0000">
+            <value>7ffe</value>
+          </eta>
+          <phi max="3ffff" min="00000">
+            <value>3ffff</value>
+          </phi>
+          <location>A0</location>
+        </CorrMuTauJet_TauJet>
         <delta_eta max="3fff" min="0000">
           <value>0001</value>
         </delta_eta>
         <delta_phi max="3ff" min="000">
           <value>200</value>
         </delta_phi>      
-      </CorrTauJetMu>
+      </CorrMuTauJet>
       <CASTORrapgap condition="CondCastor" particle="Castor" type="TypeCastor">
         <location>A0</location>
       </CASTORrapgap>
