@@ -216,4 +216,13 @@
       </CASTORrapgap>
     </conditions>
   </condition_chip_2>
+  <techtriggers>
+      <L1TT_BscHaloPlusZInner>TechTrig
+        <output_pin nr="36"/>
+      </L1TT_BscHaloPlusZInner>
+      <L1TT_BscHaloMinusZInner>TechTrig
+        <output_pin nr="38"/>
+      </L1TT_BscHaloMinusZInner>
+  </techtriggers>
+  
 </def>
