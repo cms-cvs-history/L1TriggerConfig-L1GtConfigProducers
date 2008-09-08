@@ -89,6 +89,12 @@
       <L1_SingleMu5_CASTORrapgap>SingleMu5 AND CASTORrapgap<output_pin nr="47" pin="b"/>
         <output_pin nr="47" pin="a"/>
       </L1_SingleMu5_CASTORrapgap>
+      <L1_SingleHfBitCountsI0_1>SingleHfBitCounts_I0_1<output_pin nr="48" pin="b"/>
+        <output_pin nr="48" pin="a"/>
+      </L1_SingleHfBitCountsI0_1>
+      <L1_SingleHfRingEtSumsI2_3>SingleHfRingEtSums_I2_3<output_pin nr="49" pin="b"/>
+        <output_pin nr="49" pin="a"/>
+      </L1_SingleHfRingEtSumsI2_3>
     </prealgos>
     <conditions>
       <CorrMuCenJet condition="CondCorrelation" particle="Mu:CenJet" type="Type2cor">
@@ -214,6 +220,20 @@
       <CASTORrapgap condition="CondCastor" particle="Castor" type="TypeCastor">
         <location>A0</location>
       </CASTORrapgap>
+      <SingleHfBitCounts_I0_1 condition="CondHfBitCounts" particle="HfBitCounts" type="0">
+        <et_threshold max="7" min="0">
+          <ge_eq mode="bit">1</ge_eq>
+          <value>01</value>
+        </et_threshold>
+        <location>A0</location>
+      </SingleHfBitCounts_I0_1>
+      <SingleHfRingEtSums_I2_3 condition="CondHfRingEtSums" particle="HfRingEtSums" type="2">
+        <et_threshold max="7" min="0">
+          <ge_eq mode="bit">1</ge_eq>
+          <value>03</value>
+        </et_threshold>
+        <location>A0</location>
+      </SingleHfRingEtSums_I2_3>
     </conditions>
   </condition_chip_2>
   <techtriggers>
