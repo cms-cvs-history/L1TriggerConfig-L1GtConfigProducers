@@ -20,7 +20,9 @@ process.load("L1TriggerConfig.L1GtConfigProducers.L1GtConfig_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu2008_2E31_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1x1032.L1MenuTestCondCorrelation_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v3_Unprescaled_cff")
-process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v4_Unprescaled_cff")
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v4_Unprescaled_cff")
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v5_Unprescaled_cff")
+process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup2_v1_Unprescaled_cff")
 
 
 # path to be run
@@ -34,13 +36,13 @@ process.MessageLogger.debugModules = ['l1GtTriggerMenuTest']
 process.MessageLogger.cout = cms.untracked.PSet(
     INFO = cms.untracked.PSet(
         limit = cms.untracked.int32(-1)
-    ),
-    threshold = cms.untracked.string('DEBUG'), ## DEBUG 
+    )#,
+    #threshold = cms.untracked.string('DEBUG'), ## DEBUG 
+    #
+    #DEBUG = cms.untracked.PSet( ## DEBUG, all messages  
 
-    DEBUG = cms.untracked.PSet( ## DEBUG, all messages  
-
-        limit = cms.untracked.int32(-1)
-    )
+    #    limit = cms.untracked.int32(-1)
+    #)
 )
 
 
