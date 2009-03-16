@@ -16,15 +16,28 @@ process.source = cms.Source("EmptySource")
 process.load("L1TriggerConfig.L1GtConfigProducers.L1GtConfig_cff")
 
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1x1032.L1Menu2007_cff")
-#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu2008_2E30_cff")
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1x1032.L1Menu_Test_cff")
+
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu2008_2E31_cff")
-#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1x1032.L1MenuTestCondCorrelation_cff")
+#
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v0_L1T_Scales_20080922_Imp0_Unprescaled_cff")
+
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu2008_2E30_cff")
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu_2008MC_2E30_Unprescaled_cff")
+#
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu_2008MC_2E30_v1_L1T_Scales_20080922_Imp0_Unprescaled_cff")
+
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v3_Unprescaled_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v4_Unprescaled_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup_v5_Unprescaled_cff")
+#
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup2_v1_Unprescaled_cff")
 #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup2_v2_Unprescaled_cff")
-process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu_2008MC_2E30_Unprescaled_cff")
+#
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup2_v3_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
+#process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_startup2_v4_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
+process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_Commissioning2009_v0_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
+
 
 
 # path to be run
@@ -36,15 +49,15 @@ process.p = cms.Path(process.l1GtTriggerMenuTest)
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 process.MessageLogger.debugModules = ['l1GtTriggerMenuTest']
 process.MessageLogger.cout = cms.untracked.PSet(
-    INFO = cms.untracked.PSet(
-        limit = cms.untracked.int32(-1)
-    )#,
-    #threshold = cms.untracked.string('DEBUG'), ## DEBUG 
-    #
-    #DEBUG = cms.untracked.PSet( ## DEBUG, all messages  
-
+    #INFO = cms.untracked.PSet(
     #    limit = cms.untracked.int32(-1)
-    #)
+    #)#,
+    threshold = cms.untracked.string('DEBUG'), ## DEBUG 
+    
+    DEBUG = cms.untracked.PSet( ## DEBUG, all messages  
+
+        limit = cms.untracked.int32(-1)
+    )
 )
 
 

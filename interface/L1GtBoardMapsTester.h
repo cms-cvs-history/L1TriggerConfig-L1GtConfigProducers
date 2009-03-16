@@ -3,19 +3,22 @@
 
 /**
  * \class L1GtBoardMapsTester
- *
- *
- * Description: test analyzer for various mappings of the L1 GT boards.
+ * 
+ * 
+ * Description: test analyzer for various mappings of the L1 GT boards.  
  *
  * Implementation:
  *    <TODO: enter implementation details>
- *
+ *   
  * \author: Vasile Mihai Ghete - HEPHY Vienna
- *
- * $Date$
- * $Revision$
+ * 
+ * $Date:$
+ * $Revision:$
  *
  */
+
+// this class header
+#include "L1TriggerConfig/L1GtConfigProducers/interface/L1GtBoardMapsTester.h"
 
 // system include files
 
@@ -28,6 +31,7 @@
 
 
 // forward declarations
+class L1GtBoardMaps;
 
 // class declaration
 class L1GtBoardMapsTester : public edm::EDAnalyzer
