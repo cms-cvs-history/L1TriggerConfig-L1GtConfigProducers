@@ -3,15 +3,15 @@
 
 /**
  * \class L1GtBoardMapsTrivialProducer
- *
- *
- * Description: ESProducer for mappings of the L1 GT boards.
+ * 
+ * 
+ * Description: ESProducer for mappings of the L1 GT boards.  
  *
  * Implementation:
  *    <TODO: enter implementation details>
- *
+ *   
  * \author: Vasile Mihai Ghete - HEPHY Vienna
- *
+ * 
  * $Date$
  * $Revision$
  *
@@ -21,11 +21,14 @@
 #include <memory>
 #include "boost/shared_ptr.hpp"
 
-#include <vector>
+#include <string>
 
 // user include files
 //   base class
 #include "FWCore/Framework/interface/ESProducer.h"
+
+#include "FWCore/Framework/interface/ModuleFactory.h"
+#include "FWCore/Framework/interface/ESHandle.h"
 
 #include "CondFormats/L1TObjects/interface/L1GtBoard.h"
 #include "CondFormats/L1TObjects/interface/L1GtBoardMaps.h"
