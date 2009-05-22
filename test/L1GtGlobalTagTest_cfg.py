@@ -28,8 +28,8 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 process.GlobalTag.globaltag = useGlobalTag + '::All'
 
 # take the L1GTParameters from trivial producer instead of default Global Tag
-process.load('L1TriggerConfig.L1GtConfigProducers.L1GtParametersConfig_cff')
-process.es_prefer_l1GtParameters = cms.ESPrefer('L1GtParametersTrivialProducer','l1GtParameters')
+#process.load('L1TriggerConfig.L1GtConfigProducers.L1GtParametersConfig_cff')
+#process.es_prefer_l1GtParameters = cms.ESPrefer('L1GtParametersTrivialProducer','l1GtParameters')
 
 # paths to be run
 process.l1GtStableParametersTest = cms.EDAnalyzer("L1GtStableParametersTester")
