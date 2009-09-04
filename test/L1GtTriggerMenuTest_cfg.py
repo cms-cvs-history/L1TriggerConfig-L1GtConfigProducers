@@ -3,8 +3,8 @@
 import FWCore.ParameterSet.Config as cms
  
 # choose one global tag to print the menu  
-useGlobalTag = 'IDEAL_31X'
-#useGlobalTag='STARTUP_31X'
+useGlobalTag = 'MC_31X_V8'
+#useGlobalTag='STARTUP31X_V7'
 
 # explicit choice of the L1 menu
 #    default menu from Global Tag: put l1Menu = ''
@@ -47,7 +47,8 @@ if l1Menu != '' :
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v1_L1T_Scales_20080922_Imp0_Unprescaled_cff")
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v2_L1T_Scales_20080922_Imp0_Unprescaled_cff")
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v2_L1T_Scales_20090519_Imp0_Unprescaled_cff")
-        process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v2_L1T_Scales_20090624_Imp0_Unprescaled_cff")
+        #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v2_L1T_Scales_20090624_Imp0_Unprescaled_cff")
+        process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1031.L1Menu_MC2009_v4_L1T_Scales_20090624_Imp0_Unprescaled_cff")
 
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu2008_2E30_cff")
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.lumi1030.L1Menu_2008MC_2E30_Unprescaled_cff")
@@ -67,6 +68,7 @@ if l1Menu != '' :
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_Commissioning2009_v1_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_Commissioning2009_v2_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
         #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_Commissioning2009_v3_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
+        #process.load("L1TriggerConfig.L1GtConfigProducers.Luminosity.startup.L1Menu_Commissioning2009_v5_L1T_Scales_20080926_startup_Imp0_Unprescaled_cff")
     else :
         print 'No such L1 menu: ', l1Menu 
 else :
