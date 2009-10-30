@@ -2,15 +2,19 @@
 
 import FWCore.ParameterSet.Config as cms
  
-# choose one global tag to print the menu  
-useGlobalTag = 'MC_31X_V8'
+# choose the global tag to print the menu  
+useGlobalTag = 'MC_31X_V9'
 #useGlobalTag='STARTUP31X_V7'
+
+# if an SQLlite file is given, the menu will be read from the SQL file instead of the global tag
+#useSqlFile = ''
+useSqlFile = '/afs/cern.ch/user/w/wsun/public/conddb/l1config.db.new2'
 
 # explicit choice of the L1 menu
 #    default menu from Global Tag: put l1Menu = ''
 #    otherwise, use 'myMenu' and un-comment the corresponding menu in the list of the menus
 
-l1Menu = 'myMenu'
+l1Menu = ''
 
 # process
 process = cms.Process("L1GtTriggerMenuTest")
@@ -72,7 +76,17 @@ if l1Menu != '' :
     else :
         print 'No such L1 menu: ', l1Menu 
 else :
-    print '   Using default L1 trigger menu from Global Tag ', useGlobalTag    
+    if useSqlFile != '' :
+        print '   Using L1 trigger menu from SQLlite file ', useSqlFile   
+
+        from CondTools.L1Trigger.L1CondDBSource_cff import initCondDBSource
+        initCondDBSource( process,
+                  inputDBConnect = 'sqlite_file:' + useSqlFile,
+                  tagBase = 'IDEAL',
+                  includeAllTags = True )
+       
+    else :
+        print '   Using default L1 trigger menu from Global Tag ', useGlobalTag    
 
 
 
