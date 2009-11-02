@@ -77,7 +77,9 @@ if l1Menu != '' :
         print 'No such L1 menu: ', l1Menu 
 else :
     if useSqlFile != '' :
-        print '   Using L1 trigger menu from SQLlite file ', useSqlFile   
+        print '   Using L1 trigger menu from SQLlite file ' 
+        print '       ', useSqlFile   
+        print '       '
 
         from CondTools.L1Trigger.L1CondDBSource_cff import initCondDBSource
         initCondDBSource( process,
@@ -103,9 +105,9 @@ process.MessageLogger.cout = cms.untracked.PSet(
     #INFO = cms.untracked.PSet(
     #    limit = cms.untracked.int32(-1)
     #)#,
-    threshold = cms.untracked.string('DEBUG'), ## DEBUG 
+    threshold = cms.untracked.string('ERROR'), ## DEBUG 
     
-    DEBUG = cms.untracked.PSet( ## DEBUG, all messages  
+    ERROR = cms.untracked.PSet( ## DEBUG, all messages  
 
         limit = cms.untracked.int32(-1)
     )
