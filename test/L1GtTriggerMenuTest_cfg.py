@@ -3,12 +3,12 @@
 import FWCore.ParameterSet.Config as cms
  
 # choose the global tag to print the menu  
-useGlobalTag = 'MC_31X_V9'
-#useGlobalTag='STARTUP31X_V7'
+#useGlobalTag = 'MC_31X_V9'
+useGlobalTag='STARTUP31X_V7'
 
 # if an SQLlite file is given, the menu will be read from the SQL file instead of the global tag
 #useSqlFile = ''
-useSqlFile = '/afs/cern.ch/user/w/wsun/public/conddb/l1config.db.new2'
+useSqlFile = '/afs/cern.ch/user/w/wsun/public/conddb/v6menu.db'
 
 # explicit choice of the L1 menu
 #    default menu from Global Tag: put l1Menu = ''
