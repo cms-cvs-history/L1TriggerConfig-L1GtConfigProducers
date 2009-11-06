@@ -77,15 +77,20 @@ if l1Menu != '' :
         print 'No such L1 menu: ', l1Menu 
 else :
     if useSqlFile != '' :
-        print '   Using L1 trigger menu from SQLlite file ' 
+        print '   Retrieve L1 trigger menu only from SQLlite file ' 
         print '       ', useSqlFile   
         print '       '
 
-        from CondTools.L1Trigger.L1CondDBSource_cff import initCondDBSource
-        initCondDBSource( process,
-                  inputDBConnect = 'sqlite_file:' + useSqlFile,
-                  tagBase = 'IDEAL',
-                  includeAllTags = True )
+        from CondCore.DBCommon.CondDBSetup_cfi import CondDBSetup
+        process.l1conddb = cms.ESSource("PoolDBESSource",
+                                CondDBSetup,
+                                connect = cms.string('sqlite_file:' + useSqlFile),
+                                toGet = cms.VPSet(cms.PSet(
+                                            record = cms.string('L1GtTriggerMenuRcd'),
+                                            tag = cms.string('L1GtTriggerMenu_IDEAL'))),
+                                            BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')
+                                            )
+        process.es_prefer_l1conddb = cms.ESPrefer("PoolDBESSource","l1conddb")
        
     else :
         print '   Using default L1 trigger menu from Global Tag ', useGlobalTag    
