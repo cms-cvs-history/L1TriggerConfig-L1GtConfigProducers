@@ -10,8 +10,8 @@ import FWCore.ParameterSet.Config as cms
 # choose a valid global tag for the release you are using 
 # for the option "l1MenuSource='globalTag'", the menu from global tag will be printed  
 #
-# 4_2_X
-useGlobalTag='GR_P_V25'
+# 3_8_X gTags
+useGlobalTag='TESTL1_ST311'
 
 # process
 process = cms.Process("L1GtTriggerMenuTest")
